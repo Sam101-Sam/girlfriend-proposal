@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Ready ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="countdown-page">
+
+<div class="countdown-container">
+
+    <h2 class="smallText">
+        ❤️ One little surprise is waiting for you... ❤️
+    </h2>
+
+    <h1 id="countdown">3</h1>
+
+    <p class="loading">
+        Get Ready...
+    </p>
+
+</div>
+
+<script>
+
+let count = 3;
+
+const countdown = document.getElementById("countdown");
+
+const timer = setInterval(() => {
+
+    count--;
+
+    if(count > 0){
+
+        countdown.innerHTML = count;
+
+    }else{
+
+        clearInterval(timer);
+
+        countdown.innerHTML = "💌";
+
+        setTimeout(()=>{
+
+            window.location.href="letter.html";
+
+        },1500);
+
+    }
+
+},1000);
+
+</script>
+
+</body>
+</html>
