@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Love Letter ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="letterPage">
+
+<div class="letterContainer">
+
+    <h1 class="letterTitle">
+        💌 A Letter For You 💌
+    </h1>
+
+    <p class="tapText">
+        Click the envelope to open it ❤️
+    </p>
+
+    <div id="envelope" class="envelope">
+
+        💌
+
+    </div>
+
+</div>
+
+<div id="letter" class="hiddenLetter">
+
+<h1>My Babyy ❤️</h1>
+
+<p>
+
+Happy Girlfriend's Day, my love.
+
+<br><br>
+
+Today is all about celebrating you...
+
+the amazing woman who fills my life with happiness,
+love, laughter and unforgettable memories.
+
+<br><br>
+
+Every single day I thank God for bringing you into my life.
+
+Your smile brightens my darkest days.
+
+Your laugh is my favorite sound.
+
+Your hugs are my safest place.
+
+<br><br>
+
+Thank you for loving me.
+
+Thank you for believing in me.
+
+Thank you for standing beside me.
+
+You mean more to me than words could ever describe.
+
+<br><br>
+
+I can't wait to take you out and create another beautiful memory together.
+
+I hope this little surprise makes you smile because seeing you happy is one of my greatest joys.
+
+<br><br>
+
+Happy Girlfriend's Day, Trista.
+
+I love you today...
+
+Tomorrow...
+
+and forever.
+
+❤️🌹❤️
+
+</p>
+
+<h2>
+
+Forever Yours,
+
+<br>
+
+Samuel ❤️
+
+</h2>
+
+<button onclick="window.location.href='surprise.html'" class="surpriseBtn">
+
+🎁 One Last Surprise ❤️
+
+</button>
+
+</div>
+
+<script>
+
+const envelope=document.getElementById("envelope");
+
+const letter=document.getElementById("letter");
+
+envelope.onclick=function(){
+
+document.querySelector(".letterContainer").style.display="none";
+
+letter.style.display="block";
+
+letter.classList.add("show");
+
+}
+
+</script>
+
+</body>
+</html>
