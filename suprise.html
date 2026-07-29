@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Special Memory ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="videoPage">
+
+<div class="videoContainer">
+
+<video id="loveVideo" autoplay controls>
+
+<source src="surprise.mp4" type="video/mp4">
+
+Your browser does not support video.
+
+</video>
+
+</div>
+
+<div id="ending" class="ending">
+
+<h1>❤️ Happy Girlfriend's Day ❤️</h1>
+
+<h2>My Beautiful Trista 🌹</h2>
+
+<p>
+
+Thank you for saying YES.
+
+<br><br>
+
+I honestly can't explain how grateful I am to have you.
+
+Every day with you is another beautiful memory.
+
+I promise to always love you,
+
+respect you,
+
+support you,
+
+and make you smile.
+
+<br><br>
+
+I can't wait for our special date.
+
+❤️
+
+</p>
+
+<h2>
+
+Forever Yours,
+
+<br>
+
+Samuel ❤️
+
+</h2>
+
+</div>
+
+<script>
+
+const video=document.getElementById("loveVideo");
+
+const ending=document.getElementById("ending");
+
+video.onended=function(){
+
+document.querySelector(".videoContainer").style.display="none";
+
+ending.style.display="flex";
+
+document.body.classList.add("celebrate");
+
+}
+
+</script>
+
+</body>
+
+</html>
