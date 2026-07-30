@@ -1,123 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>One Last Surprise ❤️ v2</title>
+<title>One Last Surprise ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+body.surprise-page{
 
-body{
-font-family:'Poppins',sans-serif;
+display:block !important;
+
+overflow-y:auto !important;
+
+overflow-x:hidden !important;
+
+min-height:100vh !important;
+
 background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
-color:white;
-overflow-x:hidden;
+
 }
 
 .container{
+
 max-width:900px;
+
 margin:auto;
-padding:50px 25px;
+
+padding:60px 25px 250px;
+
+text-align:center;
+
 }
 
 h1{
+
 font-family:'Great Vibes',cursive;
+
 font-size:70px;
-text-align:center;
-margin-bottom:25px;
+
+margin-bottom:20px;
+
 }
 
 h2{
-text-align:center;
-margin-bottom:35px;
+
+margin-bottom:30px;
+
 }
 
 p{
+
 font-size:22px;
+
 line-height:2;
+
 margin-bottom:25px;
-text-align:center;
+
 }
 
-.scroll{
+.arrow{
+
+font-size:35px;
+
 margin-top:60px;
-text-align:center;
-font-size:20px;
+
 animation:bounce 1.5s infinite;
+
 }
 
-.video-section{
-margin-top:120px;
-text-align:center;
+.video{
+
+margin-top:180px;
+
 padding-bottom:80px;
+
 }
 
-.video-section h2{
-font-family:'Great Vibes',cursive;
-font-size:50px;
-margin-bottom:20px;
-}
+.watch{
 
-.watch-btn{
 display:inline-block;
+
 margin-top:30px;
+
 padding:18px 40px;
+
 background:#ff1744;
+
 color:white;
+
 text-decoration:none;
-border-radius:50px;
+
 font-size:22px;
-transition:.3s;
+
+border-radius:50px;
+
+transition:.4s;
+
 }
 
-.watch-btn:hover{
-transform:scale(1.08);
+.watch:hover{
+
+transform:scale(1.1);
+
 box-shadow:0 0 20px white;
-}
 
-.heart{
-position:fixed;
-bottom:-40px;
-font-size:30px;
-animation:floatUp 7s linear forwards;
-pointer-events:none;
-}
-
-@keyframes floatUp{
-0%{
-transform:translateY(0);
-opacity:1;
-}
-100%{
-transform:translateY(-120vh);
-opacity:0;
-}
 }
 
 @keyframes bounce{
+
 0%,100%{
+
 transform:translateY(0);
+
 }
+
 50%{
+
 transform:translateY(10px);
+
 }
+
 }
 
 </style>
 
 </head>
 
-<body>
+<body class="surprise-page">
 
 <div class="container">
 
@@ -130,57 +146,56 @@ My love,
 </p>
 
 <p>
-If you've made it this far, thank you for taking this little journey with me.
+If you've reached this page, thank you for taking this beautiful journey with me.
 </p>
 
 <p>
-Every smile you've given me, every laugh we've shared, every memory we've created together has become a part of my heart.
+Every moment we've shared has become one of my favourite memories.
 </p>
 
 <p>
-You make my world brighter simply by being in it.
-I honestly don't know what I did to deserve someone as amazing as you.
+Your smile brightens my darkest days, your laughter is my favourite sound, and your love is the greatest gift I could ever ask for.
 </p>
 
 <p>
-I hope this small surprise reminds you just how special you are to me.
-Not just today...
-but every single day.
+No matter where life takes us, I promise to always cherish you, support you, and remind you just how amazing you are.
 </p>
 
 <p>
-I can't wait for all the adventures we'll have together,
-all the laughs,
-all the hugs,
-and all the memories that are still waiting for us.
+Happy Girlfriend's Day, my beautiful girl.
 </p>
 
 <p>
-Happy Girlfriend's Day, Trista ❤️
+I love you more than words could ever explain. ❤️
 </p>
 
-<p>
-I love you endlessly.
-</p>
+<div class="arrow">
 
-<div class="scroll">
-⬇️ Keep Scrolling ⬇️
+⬇️ <br>
+
+Keep Scrolling My Love ❤️
+
 </div>
 
-<div class="video-section">
+<div class="video">
 
-<h2>Our Beautiful Memories ❤️</h2>
+<h2>🎬 Our Beautiful Memories ❤️</h2>
 
 <p>
-One last gift...
-A collection of moments that mean the world to me.
+
+I saved the best for last...
+
+I hope this video reminds you of how special you are to me.
+
 </p>
 
-<a class="watch-btn"
+<a class="watch"
+
 href="https://drive.google.com/file/d/1oGUHp2lXGBTfvcuKXnQG5KGJJm-wM2Mk/view?usp=sharing"
+
 target="_blank">
 
-🎬 Watch Our Story ❤️
+❤️ Watch Our Story ❤️
 
 </a>
 
@@ -200,13 +215,13 @@ h.innerHTML="❤️";
 
 h.style.left=Math.random()*100+"vw";
 
-h.style.fontSize=(20+Math.random()*25)+"px";
-
 document.body.appendChild(h);
 
 setTimeout(()=>{
+
 h.remove();
-},7000);
+
+},6000);
 
 }
 
@@ -215,4 +230,5 @@ setInterval(heart,500);
 </script>
 
 </body>
+
 </html>
