@@ -4,37 +4,138 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Love Letter ❤️</title>
+<title>My Letter To You ❤️</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+body{
+background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:800px;
+text-align:center;
+}
+
+.envelope{
+
+font-size:160px;
+cursor:pointer;
+transition:.5s;
+animation:float 2s infinite;
+
+}
+
+.envelope:hover{
+
+transform:scale(1.1);
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.letter{
+
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:20px;
+line-height:1.8;
+animation:fadeIn 1s;
+max-height:80vh;
+overflow:auto;
+}
+
+.letter h1{
+
+font-family:'Great Vibes',cursive;
+font-size:55px;
+margin-bottom:20px;
+
+}
+
+.letter p{
+
+font-size:19px;
+
+}
+
+.openBtn{
+
+margin-top:30px;
+padding:16px 35px;
+border:none;
+border-radius:50px;
+background:#ff4081;
+color:white;
+font-size:20px;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.openBtn:hover{
+
+transform:scale(1.1);
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+
+}
+
+</style>
 
 </head>
 
-<body class="letterPage">
+<body>
 
-<div class="letterContainer">
+<div class="container">
 
-    <h1 class="letterTitle">
-        💌 A Letter For You 💌
-    </h1>
+<div id="cover">
 
-    <p class="tapText">
-        Click the envelope to open it ❤️
-    </p>
+<h2>
 
-    <div id="envelope" class="envelope">
+💌
 
-        💌
+<br><br>
 
-    </div>
+Click The Envelope ❤️
+
+</h2>
+
+<div class="envelope" id="envelope">
+
+📩
 
 </div>
 
-<div id="letter" class="hiddenLetter">
+</div>
 
-<h1>My Babyy ❤️</h1>
+<div class="letter hidden" id="letter">
+
+<h1>
+
+My Beautiful Trista ❤️
+
+</h1>
 
 <p>
 
@@ -42,52 +143,27 @@ Happy Girlfriend's Day, my love.
 
 <br><br>
 
-Today is all about celebrating you...
+I honestly don't think words will ever be enough to describe how much you mean to me.
 
-the amazing woman who fills my life with happiness,
-love, laughter and unforgettable memories.
-
-<br><br>
-
-Every single day I thank God for bringing you into my life.
-
-Your smile brightens my darkest days.
-
-Your laugh is my favorite sound.
-
-Your hugs are my safest place.
+Every moment with you has been a blessing, and every smile you give me reminds me how lucky I am to have you in my life.
 
 <br><br>
 
-Thank you for loving me.
+Thank you for loving me, supporting me, making me laugh, and always being yourself.
 
-Thank you for believing in me.
-
-Thank you for standing beside me.
-
-You mean more to me than words could ever describe.
+You make ordinary days feel extraordinary simply by being in them.
 
 <br><br>
 
-I can't wait to take you out and create another beautiful memory together.
+I can't wait to spend more time with you, make more memories, and continue writing our story together.
 
-I hope this little surprise makes you smile because seeing you happy is one of my greatest joys.
+No matter what happens, I'll always cherish you, respect you, and do my best to make you smile.
 
 <br><br>
 
-Pia mama just know that u have someone that u can run to when u feel like your world is crumbling ml 
-i love i you so much ml and i never want to loose you at any point at this life.❤️
-<br><br>
+Happy Girlfriend's Day ❤️
 
-Happy Girlfriend's Day, Trista.
-
-I love you today...
-
-Tomorrow...
-
-and forever.
-
-❤️🌹❤️
+I love you today, tomorrow, and always.
 
 </p>
 
@@ -95,13 +171,13 @@ and forever.
 
 Forever Yours,
 
-<br>
+<br><br>
 
 Samuel ❤️
 
 </h2>
 
-<button onclick="window.location.href='surprise.html'" class="surpriseBtn">
+<button class="openBtn" onclick="window.location.href='surprise.html'">
 
 🎁 One Last Surprise ❤️
 
@@ -109,23 +185,26 @@ Samuel ❤️
 
 </div>
 
+</div>
+
 <script>
 
 const envelope=document.getElementById("envelope");
+
+const cover=document.getElementById("cover");
 
 const letter=document.getElementById("letter");
 
 envelope.onclick=function(){
 
-document.querySelector(".letterContainer").style.display="none";
+cover.style.display="none";
 
-letter.style.display="block";
-
-letter.classList.add("show");
+letter.classList.remove("hidden");
 
 }
 
 </script>
 
 </body>
+
 </html>
