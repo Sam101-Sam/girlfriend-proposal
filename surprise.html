@@ -1,234 +1,207 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>One Last Surprise ❤️</title>
+    <title>One Last Surprise ❤️ v2</title>
 
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
+    <style>
 
-body.surprise-page{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-display:block !important;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff4d6d, #ff8fab, #ffc2d1);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: white;
+        }
 
-overflow-y:auto !important;
+        .container {
+            width: 90%;
+            max-width: 850px;
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .3);
+        }
 
-overflow-x:hidden !important;
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
 
-min-height:100vh !important;
+        h2 {
+            margin-bottom: 25px;
+        }
 
-background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+        p {
+            font-size: 22px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
 
-}
+        button {
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            background: #ff1744;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            transition: .4s;
+        }
 
-.container{
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px white;
+        }
 
-max-width:900px;
+        .heart {
+            position: fixed;
+            bottom: -50px;
+            font-size: 30px;
+            animation: floatUp 7s linear forwards;
+            pointer-events: none;
+        }
 
-margin:auto;
+        @keyframes floatUp {
 
-padding:60px 25px 250px;
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
 
-text-align:center;
+            100% {
+                transform: translateY(-120vh);
+                opacity: 0;
+            }
 
-}
+        }
 
-h1{
-
-font-family:'Great Vibes',cursive;
-
-font-size:70px;
-
-margin-bottom:20px;
-
-}
-
-h2{
-
-margin-bottom:30px;
-
-}
-
-p{
-
-font-size:22px;
-
-line-height:2;
-
-margin-bottom:25px;
-
-}
-
-.arrow{
-
-font-size:35px;
-
-margin-top:60px;
-
-animation:bounce 1.5s infinite;
-
-}
-
-.video{
-
-margin-top:180px;
-
-padding-bottom:80px;
-
-}
-
-.watch{
-
-display:inline-block;
-
-margin-top:30px;
-
-padding:18px 40px;
-
-background:#ff1744;
-
-color:white;
-
-text-decoration:none;
-
-font-size:22px;
-
-border-radius:50px;
-
-transition:.4s;
-
-}
-
-.watch:hover{
-
-transform:scale(1.1);
-
-box-shadow:0 0 20px white;
-
-}
-
-@keyframes bounce{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(10px);
-
-}
-
-}
-
-</style>
+    </style>
 
 </head>
 
-<body class="surprise-page">
+<body>
 
-<div class="container">
+    <!-- Romantic Background Music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="https://orangefreesounds.com/wp-content/uploads/2025/04/Emotional-romantic-piano-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-<h1>❤️ One Last Surprise ❤️</h1>
 
-<h2>For My Beautiful Trista 🌹</h2>
+    <div class="container">
 
-<p>
-My love,
-</p>
+        <h1>❤️ One Last Surprise ❤️</h1>
 
-<p>
-If you've reached this page, thank you for taking this beautiful journey with me.
-</p>
+        <h2>For My Beautiful Trista 🌹</h2>
 
-<p>
-Every moment we've shared has become one of my favourite memories.
-</p>
+        <p>
 
-<p>
-Your smile brightens my darkest days, your laughter is my favourite sound, and your love is the greatest gift I could ever ask for.
-</p>
+            Every memory we've shared is precious to me.
 
-<p>
-No matter where life takes us, I promise to always cherish you, support you, and remind you just how amazing you are.
-</p>
+            Thank you for loving me, believing in me, and making my life brighter every single day.
 
-<p>
-Happy Girlfriend's Day, my beautiful girl.
-</p>
+            You are my happiness, my peace, and my favorite person.
 
-<p>
-I love you more than words could ever explain. ❤️
-</p>
+            I hope this little surprise makes you smile as much as you make me smile.
 
-<div class="arrow">
+            Happy Girlfriend's Day, my love.
 
-⬇️ <br>
+            I love you today, tomorrow, and forever. ❤️
 
-Keep Scrolling My Love ❤️
+        </p>
 
-</div>
+        <button id="playBtn">
 
-<div class="video">
+            🎬 Watch Our Special Memory ❤️
 
-<h2>🎬 Our Beautiful Memories ❤️</h2>
+        </button>
 
-<p>
+    </div>
 
-I saved the best for last...
 
-I hope this video reminds you of how special you are to me.
+    <script>
 
-</p>
+        const bgMusic = document.getElementById("bgMusic");
 
-<a class="watch"
+        // Soft romantic volume
+        bgMusic.volume = 0.25;
 
-href="https://drive.google.com/file/d/1oGUHp2lXGBTfvcuKXnQG5KGJJm-wM2Mk/view?usp=sharing"
+        // Try to play automatically
+        bgMusic.play().catch(() => {});
 
-target="_blank">
+        // Start music after first interaction if autoplay is blocked
+        document.addEventListener("click", function startMusic() {
+            bgMusic.play().catch(() => {});
+        }, { once: true });
 
-❤️ Watch Our Story ❤️
 
-</a>
+        // Watch video
+        document.getElementById("playBtn").onclick = function() {
 
-</div>
+            // Stop background music
+            bgMusic.pause();
 
-</div>
+            // Reset music to beginning
+            bgMusic.currentTime = 0;
 
-<script>
+            // Open the special memory video
+            window.open(
+                "https://drive.google.com/file/d/1oGUHp2lXGBTfvcuKXnQG5KGJJm-wM2Mk/view?usp=sharing",
+                "_blank"
+            );
 
-function heart(){
+        };
 
-const h=document.createElement("div");
 
-h.className="heart";
+        // Floating hearts
+        function createHeart() {
 
-h.innerHTML="❤️";
+            const heart = document.createElement("div");
 
-h.style.left=Math.random()*100+"vw";
+            heart.className = "heart";
 
-document.body.appendChild(h);
+            heart.innerHTML = "❤️";
 
-setTimeout(()=>{
+            heart.style.left = Math.random() * 100 + "vw";
 
-h.remove();
+            heart.style.fontSize = (20 + Math.random() * 30) + "px";
 
-},6000);
+            document.body.appendChild(heart);
 
-}
+            setTimeout(function() {
 
-setInterval(heart,500);
+                heart.remove();
 
-</script>
+            }, 7000);
+
+        }
+
+        setInterval(createHeart, 500);
+
+    </script>
 
 </body>
 
 </html>
+```
