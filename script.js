@@ -1,171 +1,217 @@
-// ================================
-// NO BUTTON RUNS AWAY
-// ================================
+// =======================================
+// Romantic Website Script
+// =======================================
 
+// -----------------------------
+// Intro Screen
+// -----------------------------
+window.addEventListener("load", () => {
+
+    const intro = document.getElementById("intro");
+    const main = document.getElementById("mainPage");
+
+    if (intro && main) {
+        setTimeout(() => {
+            intro.style.opacity = "0";
+
+            setTimeout(() => {
+                intro.style.display = "none";
+                main.style.display = "block";
+                main.style.opacity = "0";
+
+                setTimeout(() => {
+                    main.style.transition = "1s";
+                    main.style.opacity = "1";
+                }, 100);
+
+            }, 1000);
+
+        }, 3000);
+    }
+
+});
+
+// -----------------------------
+// NO Button Runs Away
+// -----------------------------
 const noBtn = document.getElementById("noBtn");
 
 if (noBtn) {
 
-    noBtn.addEventListener("mouseover", () => {
+    function moveButton() {
 
-        const x = Math.random() * (window.innerWidth - 150);
+        const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+        const maxY = window.innerHeight - noBtn.offsetHeight - 20;
 
-        const y = Math.random() * (window.innerHeight - 80);
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
 
-        noBtn.style.position = "absolute";
-        noBtn.style.left = x + "px";
-        noBtn.style.top = y + "px";
+        noBtn.style.left = randomX + "px";
+        noBtn.style.top = randomY + "px";
+    }
 
-    });
-
+    noBtn.addEventListener("mouseenter", moveButton);
+    noBtn.addEventListener("click", moveButton);
 }
 
-// ================================
-// YES BUTTON TRANSITION
-// ================================
-
-const yesBtn = document.querySelector(".yesBtn");
+// -----------------------------
+// YES Button
+// -----------------------------
+const yesBtn = document.getElementById("yesBtn");
 
 if (yesBtn) {
 
-    yesBtn.addEventListener("click", function (e) {
+    yesBtn.addEventListener("click", () => {
 
-        e.preventDefault();
+        for(let i=0;i<20;i++){
+            createHeart();
+        }
 
-        // Glow animation
-        yesBtn.style.boxShadow = "0 0 60px white";
-        yesBtn.style.transform = "scale(1.2)";
-
-        // Fade screen
-        document.body.style.transition = "1.5s";
-        document.body.style.opacity = "0";
+        document.body.style.transition="1.5s";
+        document.body.style.opacity="0";
 
         setTimeout(() => {
-
-            window.location = "countdown.html";
-
-        }, 1500);
+            window.location.href="countdown.html";
+        },1500);
 
     });
 
 }
 
-// ================================
-// HEART BURST
-// ================================
+// -----------------------------
+// Floating Hearts
+// -----------------------------
+function createHeart(){
 
-function createHeart() {
+    const heart=document.createElement("div");
 
-    const heart = document.createElement("div");
+    heart.innerHTML="❤️";
 
-    heart.innerHTML = "❤️";
-
-    heart.style.position = "fixed";
-
-    heart.style.left = Math.random() * window.innerWidth + "px";
-
-    heart.style.top = window.innerHeight + "px";
-
-    heart.style.fontSize = (20 + Math.random() * 25) + "px";
-
-    heart.style.opacity = "0.8";
-
-    heart.style.pointerEvents = "none";
-
-    heart.style.zIndex = "9999";
+    heart.style.position="fixed";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.bottom="-30px";
+    heart.style.fontSize=(20+Math.random()*20)+"px";
+    heart.style.pointerEvents="none";
+    heart.style.zIndex="9999";
 
     document.body.appendChild(heart);
 
-    let position = window.innerHeight;
+    let pos=0;
 
-    const move = setInterval(() => {
+    const animation=setInterval(()=>{
 
-        position -= 3;
+        pos+=2;
 
-        heart.style.top = position + "px";
+        heart.style.bottom=pos+"px";
+        heart.style.transform=`translateY(-${pos}px)`;
 
-        if (position < -50) {
+        heart.style.opacity=1-(pos/600);
 
-            clearInterval(move);
+        if(pos>600){
+
+            clearInterval(animation);
 
             heart.remove();
 
         }
 
-    }, 20);
+    },20);
 
 }
 
-// Create hearts every 600ms
-setInterval(createHeart, 600);
+// Continuous hearts
+setInterval(createHeart,700);
 
-// ================================
-// VIDEO END MESSAGE
-// ================================
+// -----------------------------
+// Envelope Animation
+// -----------------------------
+const envelope=document.getElementById("envelope");
 
-const video = document.getElementById("loveVideo");
+if(envelope){
 
-if (video) {
+    envelope.addEventListener("click",()=>{
 
-    video.addEventListener("ended", () => {
-
-        document.querySelector(".videoContainer").style.display = "none";
-
-        const ending = document.getElementById("ending");
-
-        ending.style.display = "flex";
-
-        launchConfetti();
+        envelope.style.transform="scale(1.2) rotate(8deg)";
 
     });
 
 }
 
-// ================================
-// SIMPLE CONFETTI
-// ================================
+// -----------------------------
+// Video End
+// -----------------------------
+const video=document.getElementById("loveVideo");
 
-function launchConfetti() {
+if(video){
 
-    for (let i = 0; i < 150; i++) {
+video.addEventListener("ended",()=>{
 
-        const confetti = document.createElement("div");
+const ending=document.getElementById("ending");
 
-        confetti.style.position = "fixed";
+if(ending){
 
-        confetti.style.left = Math.random() * window.innerWidth + "px";
+ending.style.display="flex";
 
-        confetti.style.top = "-20px";
+}
 
-        confetti.style.width = "10px";
+launchConfetti();
 
-        confetti.style.height = "10px";
+});
 
-        confetti.style.background =
-            ["red", "pink", "gold", "white", "hotpink"][Math.floor(Math.random() * 5)];
+}
 
-        confetti.style.borderRadius = "50%";
+// -----------------------------
+// Confetti
+// -----------------------------
+function launchConfetti(){
 
-        document.body.appendChild(confetti);
+for(let i=0;i<250;i++){
 
-        let topPos = -20;
+const piece=document.createElement("div");
 
-        const fall = setInterval(() => {
+piece.style.position="fixed";
+piece.style.width="10px";
+piece.style.height="10px";
 
-            topPos += 5;
+piece.style.left=Math.random()*100+"vw";
 
-            confetti.style.top = topPos + "px";
+piece.style.top="-20px";
 
-            if (topPos > window.innerHeight) {
+piece.style.borderRadius="50%";
 
-                clearInterval(fall);
+const colors=[
+"#ff1744",
+"#ff80ab",
+"#ffffff",
+"#ffd700",
+"#00e676",
+"#40c4ff"
+];
 
-                confetti.remove();
+piece.style.background=colors[Math.floor(Math.random()*colors.length)];
 
-            }
+document.body.appendChild(piece);
 
-        }, 20);
+let topPos=-20;
 
-    }
+const fall=setInterval(()=>{
+
+topPos+=5;
+
+piece.style.top=topPos+"px";
+
+piece.style.transform=`rotate(${topPos*4}deg)`;
+
+if(topPos>window.innerHeight){
+
+clearInterval(fall);
+
+piece.remove();
+
+}
+
+},20);
+
+}
 
 }
