@@ -1,57 +1,69 @@
+```html
 <!DOCTYPE html>
 <html>
 
 <head>
-<title>A Special Surprise ❤️</title>
-<link rel="stylesheet" href="style.css">
+    <title>A Special Surprise ❤️</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-<iframe 
-src="music.html"
-id="musicFrame"
-style="display:none;">
-</iframe>
+    <!-- Romantic Background Music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="https://orangefreesounds.com/wp-content/uploads/2025/04/Emotional-romantic-piano-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
+    <div class="container">
 
-<div class="container">
+        <h1>
+            ❤️ A Special Surprise For You ❤️
+        </h1>
 
-<h1>
-❤️ A Special Surprise For You ❤️
-</h1>
+        <p>
+            I made something special just for you.
+            <br>
+            I hope this reminds you how important you are to me.
+        </p>
 
+        <button onclick="playLoveMusic()">
+            🎵 Start Our Song ❤️
+        </button>
 
-<p>
-I made something special just for you.
-<br>
-I hope this reminds you how important you are to me.
-</p>
+        <br><br>
 
+        <a href="letter.html">
+            <button>
+                💌 Open My Letter
+            </button>
+        </a>
 
-<button onclick="playLoveMusic()">
-🎵 Start Our Song ❤️
-</button>
+    </div>
 
+    <script src="script.js"></script>
 
-<br>
+    <script>
+        const bgMusic = document.getElementById("bgMusic");
 
+        // Soft romantic volume
+        bgMusic.volume = 0.25;
 
-<a href="letter.html">
+        // Try to play automatically
+        bgMusic.play().catch(() => {});
 
-<button>
-💌 Open My Letter
-</button>
+        // Start music after first interaction if autoplay was blocked
+        document.addEventListener("click", function startMusic() {
+            bgMusic.play().catch(() => {});
+        }, { once: true });
 
-</a>
-
-
-</div>
-
-
-<script src="script.js"></script>
+        // Start music when "Start Our Song" is clicked
+        function playLoveMusic() {
+            bgMusic.play().catch(() => {});
+        }
+    </script>
 
 </body>
 
 </html>
+```
