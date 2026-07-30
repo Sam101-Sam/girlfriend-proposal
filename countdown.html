@@ -1,140 +1,141 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Get Ready ❤️</title>
+<title>Get Ready ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <style>
+<style>
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #ff4d6d, #ff8fab, #ffc2d1);
-            overflow: hidden;
-            color: white;
-        }
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+overflow:hidden;
+color:white;
+}
 
-        .box {
-            text-align: center;
-            animation: fadeIn 1s;
-        }
+.box{
 
-        .box h2 {
-            font-size: 35px;
-            margin-bottom: 20px;
-        }
+text-align:center;
 
-        #number {
-            font-size: 180px;
-            font-weight: bold;
-            animation: pulse 1s infinite;
-        }
+animation:fadeIn 1s;
 
-        .loading {
-            margin-top: 20px;
-            font-size: 22px;
-        }
+}
 
-        @keyframes pulse {
+.box h2{
 
-            0% {
-                transform: scale(1);
-            }
+font-size:35px;
 
-            50% {
-                transform: scale(1.2);
-            }
+margin-bottom:20px;
 
-            100% {
-                transform: scale(1);
-            }
+}
 
-        }
+#number{
 
-    </style>
+font-size:180px;
+
+font-weight:bold;
+
+animation:pulse 1s infinite;
+
+}
+
+.loading{
+
+margin-top:20px;
+
+font-size:22px;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-    <!-- Romantic Background Music -->
-    <audio id="bgMusic" autoplay loop>
-        <source src="https://orangefreesounds.com/wp-content/uploads/2025/04/Emotional-romantic-piano-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<div class="box">
 
-    <div class="box">
+<h2>
 
-        <h2>
-            ❤️ One Little Surprise Is Waiting... ❤️
-        </h2>
+❤️ One Little Surprise Is Waiting... ❤️
 
-        <div id="number">
-            3
-        </div>
+</h2>
 
-        <p class="loading">
-            Get Ready...
-        </p>
+<div id="number">
 
-    </div>
+3
 
-    <script>
+</div>
 
-        const bgMusic = document.getElementById("bgMusic");
+<p class="loading">
 
-        // Soft romantic volume
-        bgMusic.volume = 0.25;
+Get Ready...
 
-        // Try to play automatically
-        bgMusic.play().catch(() => {});
+</p>
 
-        // Start music after first interaction if autoplay is blocked
-        document.addEventListener("click", function startMusic() {
-            bgMusic.play().catch(() => {});
-        }, { once: true });
+</div>
 
+<script>
 
-        // Countdown
-        let count = 3;
+let count=3;
 
-        const number = document.getElementById("number");
+const number=document.getElementById("number");
 
-        const timer = setInterval(() => {
+const timer=setInterval(()=>{
 
-            count--;
+count--;
 
-            if (count > 0) {
+if(count>0){
 
-                number.innerHTML = count;
+number.innerHTML=count;
 
-            } else {
+}else{
 
-                clearInterval(timer);
+clearInterval(timer);
 
-                number.innerHTML = "💌";
+number.innerHTML="💌";
 
-                setTimeout(() => {
+setTimeout(()=>{
 
-                    window.location.href = "letter.html";
+window.location.href="letter.html";
 
-                }, 1500);
+},1500);
 
-            }
+}
 
-        }, 1000);
+},1000);
 
-    </script>
+</script>
 
 </body>
 
 </html>
-```
