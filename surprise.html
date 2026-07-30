@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,85 +12,105 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    color:white;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+color:white;
+overflow-x:hidden;
 }
 
 .container{
-    width:90%;
-    max-width:850px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(15px);
-    padding:40px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 15px 35px rgba(0,0,0,.3);
+max-width:900px;
+margin:auto;
+padding:50px 25px;
 }
 
 h1{
-    font-family:'Great Vibes',cursive;
-    font-size:70px;
-    margin-bottom:20px;
+font-family:'Great Vibes',cursive;
+font-size:70px;
+text-align:center;
+margin-bottom:25px;
 }
 
 h2{
-    margin-bottom:25px;
+text-align:center;
+margin-bottom:35px;
 }
 
 p{
-    font-size:22px;
-    line-height:1.8;
-    margin-bottom:35px;
+font-size:22px;
+line-height:2;
+margin-bottom:25px;
+text-align:center;
 }
 
-button{
-    padding:18px 40px;
-    border:none;
-    border-radius:50px;
-    background:#ff1744;
-    color:white;
-    font-size:22px;
-    cursor:pointer;
-    transition:.4s;
+.scroll{
+margin-top:60px;
+text-align:center;
+font-size:20px;
+animation:bounce 1.5s infinite;
 }
 
-button:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 20px white;
+.video-section{
+margin-top:120px;
+text-align:center;
+padding-bottom:80px;
+}
+
+.video-section h2{
+font-family:'Great Vibes',cursive;
+font-size:50px;
+margin-bottom:20px;
+}
+
+.watch-btn{
+display:inline-block;
+margin-top:30px;
+padding:18px 40px;
+background:#ff1744;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-size:22px;
+transition:.3s;
+}
+
+.watch-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px white;
 }
 
 .heart{
-    position:fixed;
-    bottom:-50px;
-    font-size:30px;
-    animation:floatUp 7s linear forwards;
-    pointer-events:none;
+position:fixed;
+bottom:-40px;
+font-size:30px;
+animation:floatUp 7s linear forwards;
+pointer-events:none;
 }
 
 @keyframes floatUp{
-
 0%{
-    transform:translateY(0);
-    opacity:1;
+transform:translateY(0);
+opacity:1;
 }
-
 100%{
-    transform:translateY(-120vh);
-    opacity:0;
+transform:translateY(-120vh);
+opacity:0;
+}
 }
 
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(10px);
+}
 }
 
 </style>
@@ -105,66 +126,93 @@ button:hover{
 <h2>For My Beautiful Trista 🌹</h2>
 
 <p>
-
-Every memory we've shared is precious to me.
-
-Thank you for loving me, believing in me, and making my life brighter every single day.
-
-You are my happiness, my peace, and my favorite person.
-
-I hope this little surprise makes you smile as much as you make me smile.
-
-Happy Girlfriend's Day, my love.
-
-I love you today, tomorrow, and forever. ❤️
-
+My love,
 </p>
 
-<button id="playBtn">
+<p>
+If you've made it this far, thank you for taking this little journey with me.
+</p>
 
-🎬 Watch Our Special Memory ❤️
+<p>
+Every smile you've given me, every laugh we've shared, every memory we've created together has become a part of my heart.
+</p>
 
-</button>
+<p>
+You make my world brighter simply by being in it.
+I honestly don't know what I did to deserve someone as amazing as you.
+</p>
+
+<p>
+I hope this small surprise reminds you just how special you are to me.
+Not just today...
+but every single day.
+</p>
+
+<p>
+I can't wait for all the adventures we'll have together,
+all the laughs,
+all the hugs,
+and all the memories that are still waiting for us.
+</p>
+
+<p>
+Happy Girlfriend's Day, Trista ❤️
+</p>
+
+<p>
+I love you endlessly.
+</p>
+
+<div class="scroll">
+⬇️ Keep Scrolling ⬇️
+</div>
+
+<div class="video-section">
+
+<h2>Our Beautiful Memories ❤️</h2>
+
+<p>
+One last gift...
+A collection of moments that mean the world to me.
+</p>
+
+<a class="watch-btn"
+href="https://drive.google.com/file/d/1oGUHp2lXGBTfvcuKXnQG5KGJJm-wM2Mk/view?usp=sharing"
+target="_blank">
+
+🎬 Watch Our Story ❤️
+
+</a>
+
+</div>
 
 </div>
 
 <script>
 
-document.getElementById("playBtn").onclick=function(){
+function heart(){
 
-window.open(
-"https://drive.google.com/file/d/1oGUHp2lXGBTfvcuKXnQG5KGJJm-wM2Mk/view?usp=sharing",
-"_blank"
-);
+const h=document.createElement("div");
 
-}
+h.className="heart";
 
-function createHeart(){
+h.innerHTML="❤️";
 
-const heart=document.createElement("div");
+h.style.left=Math.random()*100+"vw";
 
-heart.className="heart";
+h.style.fontSize=(20+Math.random()*25)+"px";
 
-heart.innerHTML="❤️";
+document.body.appendChild(h);
 
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.fontSize=(20+Math.random()*30)+"px";
-
-document.body.appendChild(heart);
-
-setTimeout(function(){
-
-heart.remove();
-
+setTimeout(()=>{
+h.remove();
 },7000);
 
 }
 
-setInterval(createHeart,500);
+setInterval(heart,500);
 
 </script>
 
 </body>
-
 </html>
