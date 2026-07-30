@@ -1,62 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Ready ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Get Ready ❤️</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+overflow:hidden;
+color:white;
+}
+
+.box{
+
+text-align:center;
+
+animation:fadeIn 1s;
+
+}
+
+.box h2{
+
+font-size:35px;
+
+margin-bottom:20px;
+
+}
+
+#number{
+
+font-size:180px;
+
+font-weight:bold;
+
+animation:pulse 1s infinite;
+
+}
+
+.loading{
+
+margin-top:20px;
+
+font-size:22px;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+</style>
+
 </head>
 
-<body class="countdown-page">
+<body>
 
-<div class="countdown-container">
+<div class="box">
 
-    <h2 class="smallText">
-        ❤️ One little surprise is waiting for you... ❤️
-    </h2>
+<h2>
 
-    <h1 id="countdown">3</h1>
+❤️ One Little Surprise Is Waiting... ❤️
 
-    <p class="loading">
-        Get Ready...
-    </p>
+</h2>
+
+<div id="number">
+
+3
+
+</div>
+
+<p class="loading">
+
+Get Ready...
+
+</p>
 
 </div>
 
 <script>
 
-let count = 3;
+let count=3;
 
-const countdown = document.getElementById("countdown");
+const number=document.getElementById("number");
 
-const timer = setInterval(() => {
+const timer=setInterval(()=>{
 
-    count--;
+count--;
 
-    if(count > 0){
+if(count>0){
 
-        countdown.innerHTML = count;
+number.innerHTML=count;
 
-    }else{
+}else{
 
-        clearInterval(timer);
+clearInterval(timer);
 
-        countdown.innerHTML = "💌";
+number.innerHTML="💌";
 
-        setTimeout(()=>{
+setTimeout(()=>{
 
-            window.location.href="letter.html";
+window.location.href="letter.html";
 
-        },1500);
+},1500);
 
-    }
+}
 
 },1000);
 
 </script>
 
 </body>
+
 </html>
