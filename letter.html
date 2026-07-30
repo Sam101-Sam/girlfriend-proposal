@@ -1,210 +1,231 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My Letter To You ❤️</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+    <title>My Letter To You ❤️</title>
 
-body{
-background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-overflow:hidden;
-color:white;
-}
+    <link rel="stylesheet" href="style.css">
 
-.container{
-width:90%;
-max-width:800px;
-text-align:center;
-}
+    <style>
 
-.envelope{
+        body {
+            background: linear-gradient(135deg, #ff4d6d, #ff8fab, #ffc2d1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            color: white;
+        }
 
-font-size:160px;
-cursor:pointer;
-transition:.5s;
-animation:float 2s infinite;
+        .container {
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
 
-}
+        .envelope {
+            font-size: 160px;
+            cursor: pointer;
+            transition: .5s;
+            animation: float 2s infinite;
+        }
 
-.envelope:hover{
+        .envelope:hover {
+            transform: scale(1.1);
+        }
 
-transform:scale(1.1);
+        .hidden {
+            display: none;
+        }
 
-}
+        .letter {
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(15px);
+            padding: 35px;
+            border-radius: 20px;
+            line-height: 1.8;
+            animation: fadeIn 1s;
+            max-height: 80vh;
+            overflow: auto;
+        }
 
-.hidden{
+        .letter h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
 
-display:none;
+        .letter p {
+            font-size: 19px;
+        }
 
-}
+        .openBtn {
+            margin-top: 30px;
+            padding: 16px 35px;
+            border: none;
+            border-radius: 50px;
+            background: #ff4081;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: .4s;
+        }
 
-.letter{
+        .openBtn:hover {
+            transform: scale(1.1);
+        }
 
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(15px);
-padding:35px;
-border-radius:20px;
-line-height:1.8;
-animation:fadeIn 1s;
-max-height:80vh;
-overflow:auto;
-}
+        @keyframes float {
 
-.letter h1{
+            0% {
+                transform: translateY(0);
+            }
 
-font-family:'Great Vibes',cursive;
-font-size:55px;
-margin-bottom:20px;
+            50% {
+                transform: translateY(-15px);
+            }
 
-}
+            100% {
+                transform: translateY(0);
+            }
 
-.letter p{
+        }
 
-font-size:19px;
-
-}
-
-.openBtn{
-
-margin-top:30px;
-padding:16px 35px;
-border:none;
-border-radius:50px;
-background:#ff4081;
-color:white;
-font-size:20px;
-cursor:pointer;
-transition:.4s;
-
-}
-
-.openBtn:hover{
-
-transform:scale(1.1);
-
-}
-
-@keyframes float{
-
-0%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0);}
-
-}
-
-</style>
+    </style>
 
 </head>
 
 <body>
 
-<div class="container">
+    <!-- Romantic Background Music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="https://orangefreesounds.com/wp-content/uploads/2025/04/Emotional-romantic-piano-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-<div id="cover">
+    <div class="container">
 
-<h2>
+        <div id="cover">
 
-💌
+            <h2>
 
-<br><br>
+                💌
 
-Click The Envelope ❤️
+                <br><br>
 
-</h2>
+                Click The Envelope ❤️
 
-<div class="envelope" id="envelope">
+            </h2>
 
-📩
+            <div class="envelope" id="envelope">
 
-</div>
+                📩
 
-</div>
+            </div>
 
-<div class="letter hidden" id="letter">
+        </div>
 
-<h1>
 
-My Beautiful Trista ❤️
+        <div class="letter hidden" id="letter">
 
-</h1>
+            <h1>
 
-<p>
+                My Beautiful Trista ❤️
 
-Happy Girlfriend's Day, my love.
+            </h1>
 
-<br><br>
+            <p>
 
-I honestly don't think words will ever be enough to describe how much you mean to me.
+                Happy Girlfriend's Day, my love.
 
-Every moment with you has been a blessing, and every smile you give me reminds me how lucky I am to have you in my life.
+                <br><br>
 
-<br><br>
+                I honestly don't think words will ever be enough to describe how much you mean to me.
 
-Thank you for loving me, supporting me, making me laugh, and always being yourself.
+                Every moment with you has been a blessing, and every smile you give me reminds me how lucky I am to have you in my life.
 
-You make ordinary days feel extraordinary simply by being in them.
+                <br><br>
 
-<br><br>
+                Thank you for loving me, supporting me, making me laugh, and always being yourself.
 
-I can't wait to spend more time with you, make more memories, and continue writing our story together.
+                You make ordinary days feel extraordinary simply by being in them.
 
-No matter what happens, I'll always cherish you, respect you, and do my best to make you smile.
+                <br><br>
 
-<br><br>
+                I can't wait to spend more time with you, make more memories, and continue writing our story together.
 
-Happy Girlfriend's Day ❤️
+                No matter what happens, I'll always cherish you, respect you, and do my best to make you smile.
 
-I love you today, tomorrow, and always.
+                <br><br>
 
-</p>
+                Happy Girlfriend's Day ❤️
 
-<h2>
+                I love you today, tomorrow, and always.
 
-Forever Yours,
+            </p>
 
-<br><br>
+            <h2>
 
-Samuel ❤️
+                Forever Yours,
 
-</h2>
+                <br><br>
 
-<button class="openBtn" onclick="window.location.href='surprise.html'">
+                Samuel ❤️
 
-🎁 One Last Surprise ❤️
+            </h2>
 
-</button>
+            <button class="openBtn" onclick="window.location.href='surprise.html'">
 
-</div>
+                🎁 One Last Surprise ❤️
 
-</div>
+            </button>
 
-<script>
+        </div>
 
-const envelope=document.getElementById("envelope");
+    </div>
 
-const cover=document.getElementById("cover");
 
-const letter=document.getElementById("letter");
+    <script>
 
-envelope.onclick=function(){
+        const bgMusic = document.getElementById("bgMusic");
 
-cover.style.display="none";
+        // Soft romantic volume
+        bgMusic.volume = 0.25;
 
-letter.classList.remove("hidden");
+        // Try to play automatically
+        bgMusic.play().catch(() => {});
 
-}
+        // Start music after first interaction if autoplay is blocked
+        document.addEventListener("click", function startMusic() {
+            bgMusic.play().catch(() => {});
+        }, { once: true });
 
-</script>
+
+        // Open the letter
+        const envelope = document.getElementById("envelope");
+
+        const cover = document.getElementById("cover");
+
+        const letter = document.getElementById("letter");
+
+        envelope.onclick = function() {
+
+            cover.style.display = "none";
+
+            letter.classList.remove("hidden");
+
+        };
+
+    </script>
 
 </body>
 
 </html>
+```
