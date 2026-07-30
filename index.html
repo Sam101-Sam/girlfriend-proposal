@@ -1,69 +1,51 @@
-```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>A Special Surprise ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Girlfriend's Day ❤️</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="home-page">
 
-    <!-- Romantic Background Music -->
-    <audio id="bgMusic" autoplay loop>
-        <source src="https://orangefreesounds.com/wp-content/uploads/2025/04/Emotional-romantic-piano-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <div id="intro">
+        <h1>❤️ Happy Girlfriend's Day ❤️</h1>
+        <h2>For My Beautiful</h2>
+        <div class="trista">Trista 🌹</div>
+    </div>
 
-    <div class="container">
+    <div id="main">
 
-        <h1>
-            ❤️ A Special Surprise For You ❤️
-        </h1>
+        <h1 class="title">Happy Girlfriend's Day ❤️</h1>
 
         <p>
-            I made something special just for you.
-            <br>
-            I hope this reminds you how important you are to me.
+            From the very first moment you came into my life,
+            everything became brighter.
+            Today I have one special question for you...
         </p>
 
-        <button onclick="playLoveMusic()">
-            🎵 Start Our Song ❤️
-        </button>
+        <h2 class="question">
+            Will you go out with me? 🥹❤️
+        </h2>
 
-        <br><br>
+        <div class="buttons">
 
-        <a href="letter.html">
-            <button>
-                💌 Open My Letter
+            <button id="yes">
+                YES ❤️
             </button>
-        </a>
+
+            <button id="no">
+                NO 😅
+            </button>
+
+        </div>
 
     </div>
 
     <script src="script.js"></script>
 
-    <script>
-        const bgMusic = document.getElementById("bgMusic");
-
-        // Soft romantic volume
-        bgMusic.volume = 0.25;
-
-        // Try to play automatically
-        bgMusic.play().catch(() => {});
-
-        // Start music after first interaction if autoplay was blocked
-        document.addEventListener("click", function startMusic() {
-            bgMusic.play().catch(() => {});
-        }, { once: true });
-
-        // Start music when "Start Our Song" is clicked
-        function playLoveMusic() {
-            bgMusic.play().catch(() => {});
-        }
-    </script>
-
 </body>
-
 </html>
-```
